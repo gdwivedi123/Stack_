@@ -22,8 +22,10 @@ class Min_Stack
         int pop()
         {
             if(isEmpty())
-				return -1;
-			int val = mini;
+	    {
+		return -1;
+	    }
+	    int val = mini;
             if(s.top() < mini)
             {
                 mini = mini - s.top();
@@ -31,12 +33,12 @@ class Min_Stack
             s.pop();
             return val;
         }
-		int getMin()
-		{
-			return mini;
-		}
-		bool isEmpty()
-		{
-			return s.empty();
-		}
+	int getMin()
+	{
+	    return mini;
+	}
+	bool isEmpty()
+	{
+	    return s.empty();
+	}
 };
